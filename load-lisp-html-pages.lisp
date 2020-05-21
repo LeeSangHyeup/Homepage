@@ -1,3 +1,5 @@
+(in-package #:leesanghyeup)
+
 (defun get-first-character (string)
   (assert (stringp string))
   (char (subseq string 0 1) 0))
@@ -36,20 +38,27 @@
 (defvar lisp-html-folder "lisp-html")
 (defvar lisp-file-extension ".lisp")
 
-(defun call-function (function-name-string &rest parameters)
-  (assert (stringp function-name-string))
-  (apply (intern (string-upcase function-name-string)) parameters))
+(defun string-to-symbol (string)
+  (intern (string-upcase string)))
+
+;(defun call-function (function-name-string &rest parameters)
+;  (assert (stringp function-name-string))
+;  (apply (string-to-symbol function-name-string) parameters))
 
 (defun temporary-filep (filename)
   (not (starts-with-alphabet-p filename)))
 
+(defun make-uri (filename)
+  (setf filename (replace-all filename "-" "/"))
+  (concatenate 'string "/" filename))
+
 (defun make-lisp-html-instance (filename)
-  (let* ((uri (remove-string filename lisp-file-extension))
-	 (create-html-function-name (concatenate 'string "create-" uri)))
+  (let* ((filename (remove-string filename lisp-file-extension))
+	 (create-html-function-name (concatenate 'string "create-" filename)))
     
     (make-instance 'lisp-html
-		   :uri uri
-		   :create-html-function-name create-html-function-name)))
+		   :uri (make-uri filename)
+		   :create-html-function-name (string-to-symbol create-html-function-name))))
 
 (defun load-lisp-html-pages ()
   (let ((html-pages)

@@ -5,7 +5,7 @@
 
 
 (dolist (page (load-lisp-html-pages))
-  (push (hunchentoot:create-prefix-dispatcher (uri page) (create-function page)) *dispatch-table*)
+  (push (hunchentoot:create-prefix-dispatcher (uri page) (create-html-function-name page)) *dispatch-table*))
   ;;(push (hunchentoot:create-prefix-dispatcher "/main" 'create-main-page) *dispatch-table*)
 
 

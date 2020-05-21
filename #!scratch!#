@@ -1,2 +1,0 @@
-(defpackage :LeeSanghyeup (:use :cl :cl-who :hunchentoot :parenscript))
-(in-package :LeeSanghyeup)

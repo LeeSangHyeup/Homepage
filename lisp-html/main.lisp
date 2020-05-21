@@ -1,4 +1,4 @@
-(load "lisp-html/template-pages/base-page.lisp")
+(in-package #:leesanghyeup)
 
 (defun create-main()
   (base-page (:title "Lee Sang Hyeup")
