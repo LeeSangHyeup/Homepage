@@ -14,7 +14,7 @@
 	       (:file "load-lisp-html-pages")
 	       
 	       (:module "lisp-html"
-		:components ((:file "main" :depends-on ("template-pages"))
+		:components ((:file "index" :depends-on ("template-pages"))
 			     
 			     (:module "template-pages"
 			      :components ((:file "base-page")))))))

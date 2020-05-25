@@ -1,5 +1,8 @@
 (in-package #:leesanghyeup)
 
+(defun aaa ()
+  (princ "ㄴㅇㄻㄴㅇ"))
+
 (defun get-first-character (string)
   (assert (stringp string))
   (char (subseq string 0 1) 0))
@@ -29,7 +32,7 @@
                            :start old-pos
                            :end (or pos (length string)))
           when pos do (write-string replacement out)
-          while pos)))
+	    while pos)))
 
 (defun remove-string (string part)
   ;;;remove all string1 in string2
@@ -41,15 +44,20 @@
 (defun string-to-symbol (string)
   (intern (string-upcase string)))
 
-;(defun call-function (function-name-string &rest parameters)
-;  (assert (stringp function-name-string))
-;  (apply (string-to-symbol function-name-string) parameters))
+					;(defun call-function (function-name-string &rest parameters)
+					;  (assert (stringp function-name-string))
+					;  (apply (string-to-symbol function-name-string) parameters))
 
 (defun temporary-filep (filename)
   (not (starts-with-alphabet-p filename)))
 
 (defun make-uri (filename)
   (setf filename (replace-all filename "-" "/"))
+  #|
+  (if (string-equal filename "index")
+      ;; locate index.lisp at root page 
+      "/"     
+  |#
   (concatenate 'string "/" filename))
 
 (defun make-lisp-html-instance (filename)
