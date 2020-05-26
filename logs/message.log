@@ -1,0 +1,1 @@
+[2020-05-27 06:24:07 [ERROR]] Wake-for-shutdown connect failed: The condition Socket error in "connect": 10049 (요청한 주소는 해당 컨텍스트에서 유효하지 않습니다.) occurred with errno: 0.

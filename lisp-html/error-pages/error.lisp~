@@ -165,7 +165,11 @@
 			 (:li (:span :class "fa-li" (:i :class "fas fa-check"))
 			      (write-string "나이브 베이지안, SVM, CNN 등 몇 가지 기계학습 알고리즘을 가지고 Classification이나 감성분석을 수행하는 일을 여러번 해봤습니다."))
 			 (:li (:span :class "fa-li" (:i :class "fas fa-check"))
-			      (write-string "Java, Python을 사용하여 Amazon, Naver 등의 여러 사이트를 crawling하는 작업을 해봤습니다."))
+			      (write-string "Java, Python을 사용하여 amazon, 네이버등의 여러 사이트를 crawling하는 작업을 해봤습니다."))
+			 (:li (:span :class "fa-li" (:i :class "fas fa-check"))
+			      (write-string "나이브 베이지안, SVM, CNN 등 몇 가지 기계학습 알고리즘을 가지고 Classification이나 감성분석을 수행하는 일을 여러번 해봤습니다."))
+			 (:li (:span :class "fa-li" (:i :class "fas fa-check"))
+			      (write-string "Java , Python 언어를 사용하여 amazon, 네이버등 여러 사이트를 crawling하는 작업을 해봤습니다."))
 			 (:li (:span :class "fa-li" (:i :class "fas fa-check"))
 			      (write-string "비정형 텍스트를 기계학습 알고리즘을 적용하기 용이한 형태의 배열이나 벡터형식의 데이터로 변환하는 전처리 작업을 자주 해봤습니다."))
 			 (:li (:span :class "fa-li" (:i :class "fas fa-check"))
@@ -178,33 +182,18 @@
     (:section :class "resume-section" :id "interests"
 	      (:div :class "resume-section-content"
 		    (:h2 :class "mb-5" (write-string "Interests"))
-		    (:p (write-string "-프론트엔드 작업보다는 서버의 쿼리나 비즈니스로직을 처리하는 백엔드 작업을 선호합니다
+		    (:p (write-string "-UI디자인이나 프론트엔드쪽 작업보다는 서버쪽 쿼리나 비즈니스로직을 처리하는 작업을 선호합니다
 "))
 		    (:p (write-string "-클린코드, 리펙토링, 방어적 프로그래밍, 테스트 주도 개발처럼 탄탄하고 구조적이면서 읽기쉬운 프로그램을 만드는 것에 관심이 있습니다."))
 		    (:p (write-string "-펄, 리스프, 파이썬 등 짦은 코드로 강력한 기능을 사용할 수 있는 고수준 언어를 배우고 사용하는 것에 관심이 있습니다."))
 		    (:p :class "mb-0" (write-string "<br></br>@읽은 책<br></br>"))
-		    
-		    (:p :class "mb-0"
-			(:a :href "https://book.naver.com/bookdb/book_detail.nhn?bid=7467119"
-			    (write-string "-실용주의 프로그래머   (앤드류 헌트, 데이비드 토머스 저)")))
-		    (:p :class "mb-0"
-			(:a :href " https://book.naver.com/bookdb/book_detail.nhn?bid=7399482"
-			    (write-string "-해커와 화가   (폴 그레이엄 저)")))
-		    (:p :class "mb-0"
-			    (:a :href " https://book.naver.com/bookdb/book_detail.nhn?bid=1528741"
-			    (write-string "-조엘 온 소프트웨어   (조엘 스폴스키 저)")))
-		    (:p :class "mb-0"
-			(:a :href " https://book.naver.com/bookdb/book_detail.nhn?bid=6871807"
-			(write-string "-읽기 좋은 코드가 좋은 코드다   (더스틴 보즈웰, 트레버 파우커 저)")))
-		    (:p :class "mb-0"
-			(:a :href "https://book.naver.com/bookdb/book_detail.nhn?bid=7443642"
-			(write-string "-테스트주도개발   (켄트 벡 저)")))
-		    (:p :class "mb-0"
-			(:a :href "https://book.naver.com/bookdb/book_detail.nhn?bid=118190"
-			(write-string "-피플웨어   ( 톰 디마르코, 티모시 리스터 저)")))
-		    (:p :class "mb-0"
-			(:a :href "https://book.naver.com/bookdb/book_detail.nhn?bid=3018287"
-			(write-string "-맨먼스미신   (프레더릭 브룩스 저)")))
+		    (:p :class "mb-0" (write-string "-실용주의 프로그래머   (앤드류 헌트, 데이비드 토머스 저)"))
+		    (:p :class "mb-0" (write-string "-해커와 화가   (폴 그레이엄 저)"))
+		    (:p :class "mb-0" (write-string "-조엘 온 소프트웨어   (조엘 스폴스키 저)"))
+		    (:p :class "mb-0" (write-string "-읽기 좋은 코드가 좋은 코드다   (더스틴 보즈웰, 트레버 파우커 저)"))
+		    (:p :class "mb-0" (write-string "-테스트주도개발   (켄트 벡 저)"))
+		    (:p :class "mb-0" (write-string "-피플웨어   ( 톰 디마르코, 티모시 리스터 저)"))
+		    (:p :class "mb-0" (write-string "-맨먼스미신   (프레더릭 브룩스 저)"))
 		    )
 	      )
     )

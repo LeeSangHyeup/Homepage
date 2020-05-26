@@ -1,8 +1,5 @@
 (in-package #:leesanghyeup)
 
-(defun aaa ()
-  (princ "ㄴㅇㄻㄴㅇ"))
-
 (defun get-first-character (string)
   (assert (stringp string))
   (char (subseq string 0 1) 0))
@@ -44,9 +41,9 @@
 (defun string-to-symbol (string)
   (intern (string-upcase string)))
 
-					;(defun call-function (function-name-string &rest parameters)
-					;  (assert (stringp function-name-string))
-					;  (apply (string-to-symbol function-name-string) parameters))
+;(defun call-function (function-name-string &rest parameters)
+;  (assert (stringp function-name-string))
+;  (apply (string-to-symbol function-name-string) parameters))
 
 (defun temporary-filep (filename)
   (not (starts-with-alphabet-p filename)))
@@ -76,7 +73,6 @@
       (let ((filename (file-namestring file)))
 	
 	(when (not (temporary-filep filename))
-	  (load file)
 	  (let ((lisp-html-instance (make-lisp-html-instance filename)))
 	    (setf html-pages (cons lisp-html-instance html-pages))))))
     html-pages))

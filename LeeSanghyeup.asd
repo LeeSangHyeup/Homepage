@@ -9,7 +9,8 @@
 	       :cl+ssl
 	       :hunchentoot
 	       :parenscript)
-  
+
+  #+asdf-unicode :encoding #+asdf-unicode :utf-8
   :components ((:file "package")
 	       (:file "load-lisp-html-pages")
 	       

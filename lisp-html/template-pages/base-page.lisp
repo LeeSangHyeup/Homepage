@@ -6,6 +6,8 @@
      (:html :lang "ko"
 	    (:head
 	     (:meta :charset "utf-8")
+	     ;set naver webmaster
+	     (:meta :name "naver-site-verification" :content "4b6f93c32c34b5e8e849b52a3ec618a1ba9fb2e8")
 	     (:meta :name "viewport"
 		    :content "width=device-width, initial-scale=1, shrink-to-fit=no")
 	     (:title ,title)
@@ -43,7 +45,7 @@
 				    (:li :class "nav-item" (:a :class "nav-link js-scroll-trigger"
 							       :href "#about" (write-string "About")))
 				    (:li :class "nav-item" (:a :class "nav-link js-scroll-trigger"
-							       :href "#experience" (write-string "Experience")))
+							       :href "#portpolio" (write-string "Portpolio")))
 				    (:li :class "nav-item" (:a :class "nav-link js-scroll-trigger"
 							       :href "#education" (write-string "Education")))
 				    (:li :class "nav-item" (:a :class "nav-link js-scroll-trigger"
