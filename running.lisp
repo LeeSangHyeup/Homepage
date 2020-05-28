@@ -1,9 +1,7 @@
-
-(asdf:load-system :leesanghyeup)
 (in-package #:leesanghyeup)
 
 (defun reload ()
-  (asdf:load-system :leesanghyeup)
+  ;;(asdf:load-system :leesanghyeup)
   (dolist (page (load-lisp-html-pages))
     #|
     (if (string-equal (uri page) "/index")
@@ -27,7 +25,15 @@
   
   ;start web server
   (hunchentoot:start *acceptor*)
+  (handler-case (bt:join-thread (find-if (lambda (th)
+					   (search "hunchentoot" (bt:thread-name th)))
+                                         (bt:all-threads)))
+    ;; Catch a user's C-c
+    (#+sbcl sb-sys:interactive-interrupt
+      () (progn
+           (format *error-output* "Aborting.~&")
+	   ;stop web server
+           (hunchentoot:stop *acceptor*)
+           (uiop:quit)))
+    (error (c) (format t "Woops, an unknown error occured:~&~a~&" c)))
   )
-
-;stop web server
-(hunchentoot:stop *acceptor*)

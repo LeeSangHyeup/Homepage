@@ -2,8 +2,9 @@
   (:use
    #:cl
    #:hunchentoot
-   #:cl-who
-   #:parenscript)
+   #:cl-who)
   (:export
    #:base-page
-   #:load-lisp-html-pages))
+   #:create-index
+   #:load-lisp-html-pages
+   #:run))
