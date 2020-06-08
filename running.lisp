@@ -1,18 +1,11 @@
 (in-package #:leesanghyeup)
 
-(defun reload ()
-  ;;(asdf:load-system :leesanghyeup)
-  (dolist (page (load-lisp-html-pages))
-    #|
-    (if (string-equal (uri page) "/index")
-	(push (hunchentoot:create-prefix-dispatcher "/" (create-html-function-name page)) *dispatch-table*)
-    |#
-    (push (hunchentoot:create-prefix-dispatcher (uri page) (create-html-function-name page)) *dispatch-table*)
-    )
-  )
 
 (defun run ()
-  (reload)
+  (in-package #:leesanghyeup)
+  
+  (dolist (page (load-lisp-html-pages))
+    (push (hunchentoot:create-prefix-dispatcher (uri page) (create-html-function-name page)) *dispatch-table*))
 
   (defvar *acceptor* (make-instance 'hunchentoot:easy-acceptor
 				    :port 80
